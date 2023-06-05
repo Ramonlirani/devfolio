@@ -5,34 +5,38 @@ import MyPicture from '../../assets/photo2.png';
 const NameCustom = () => {
   useEffect(() => {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
     let interval = null;
-
     const nameElement = document.querySelector('.name');
 
-    const handleMouseOver = (event) => {
+    const animateName = (target) => {
       let iteration = 0;
-
       clearInterval(interval);
 
       interval = setInterval(() => {
-        event.target.innerText = event.target.innerText
+        target.innerText = target.innerText
           .split('')
           .map((letter, index) => {
             if (index < iteration) {
-              return event.target.dataset.value[index];
+              return target.dataset.value[index];
             }
-
             return letters[Math.floor(Math.random() * 26)];
           })
           .join('');
 
-        if (iteration >= event.target.dataset.value.length) {
+        if (iteration >= target.dataset.value.length) {
           clearInterval(interval);
         }
 
         iteration += 1 / 3;
       }, 30);
+    };
+
+    if (nameElement) {
+      animateName(nameElement);
+    }
+
+    const handleMouseOver = (event) => {
+      animateName(event.target);
     };
 
     if (nameElement) {
