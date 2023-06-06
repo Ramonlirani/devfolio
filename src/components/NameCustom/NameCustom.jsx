@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 import MyPicture from '../../assets/photo2.png';
 
 const NameCustom = () => {
@@ -55,7 +55,7 @@ const NameCustom = () => {
       alignItems={'center'}
       justifyContent={'space-between'}
       marginX={300}
-      id="about"
+      id="home"
     >
       <Text fontSize={'45px'} mt={200}>
         Hi, <br /> My name is <br />

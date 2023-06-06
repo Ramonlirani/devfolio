@@ -14,48 +14,54 @@ import LogoNodeJS from '../../assets/logosSkills/iconnodejs.png';
 
 const Skills = () => {
   return (
-    <Flex flexDirection="column" alignItems="center" id="techStack">
-      <Text fontSize="40px" mb={4} color="white">
+    <Flex
+      flexDirection="column"
+      alignItems="flex-end"
+      mr={150}
+      mt={250}
+      id="techStack"
+    >
+      <Text fontSize="40px" mb={4} color="white" mt={100}>
         My tech stack
       </Text>
-      <Text fontSize="20px" mt={2} color="#a7a7a7">
+      <Text fontSize="30px" mt={2} color="#a7a7a7">
         Technologies I’ve been working with recently
       </Text>
       <Flex justifyContent="center" flexWrap="wrap" marginBottom={20}>
         <WrapItem>
-          <Avatar name="html" src={LogoHTML} width={70} />
+          <Avatar name="html" src={LogoHTML} width={70} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="css" src={LogoCSS} width={70} />
+          <Avatar name="css" src={LogoCSS} width={70} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="javaScript" src={LogoJS} width={70} />
+          <Avatar name="javaScript" src={LogoJS} width={70} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="React" src={LogoReact} width={70} />
+          <Avatar name="React" src={LogoReact} width={70} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="NodeJS" src={LogoNodeJS} width={90} />
+          <Avatar name="NodeJS" src={LogoNodeJS} width={90} mr={14} />
         </WrapItem>
       </Flex>
       <Flex justifyContent="center" flexWrap="wrap">
         <WrapItem>
-          <Avatar name="GIT" src={LogoGit} width={70} />
+          <Avatar name="GIT" src={LogoGit} width={70} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="VScode" src={LogoVScode} width={70} />
+          <Avatar name="VScode" src={LogoVScode} width={70} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="Github" src={LogoGithub} width={70} />
+          <Avatar name="Github" src={LogoGithub} width={70} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="MaterialUi" src={LogoMaterialUi} width={90} />
+          <Avatar name="MaterialUi" src={LogoMaterialUi} width={90} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="ChakraUI" src={LogoChakraUI} width={80} />
+          <Avatar name="ChakraUI" src={LogoChakraUI} width={80} mr={14} />
         </WrapItem>
         <WrapItem>
-          <Avatar name="MongoDB" src={LogoMongoDB} width={80} />
+          <Avatar name="MongoDB" src={LogoMongoDB} width={80} mr={14} />
         </WrapItem>
       </Flex>
     </Flex>

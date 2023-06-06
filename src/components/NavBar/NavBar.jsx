@@ -1,32 +1,58 @@
-import { Avatar, Flex, Image, Link, WrapItem } from '@chakra-ui/react';
+import { Avatar, Button, Flex, Image, Link, WrapItem } from '@chakra-ui/react';
 import LogoLinkedin from '../../assets/logosSkills/iconlinkedin.svg';
 import LogoGithub2 from '../../assets/logosSkills/icongithub2.svg';
-// import LogoWhatsApp from '../../assets/logosSkills/iconwhatsapp2.png';
-import LogoCurriculo from '../../assets/logosSkills/iconcurriculo.png';
-
-import { saveAs } from 'file-saver';
-const handleDownloadResume = () => {
-  const fileUrl =
-    'https://drive.google.com/file/d/1SqJnBGcycCebY6bm-a38rdRyIIbwulwY/view?usp=sharing';
-  saveAs(fileUrl, 'RamonLiraniCurriculo.pdf');
-};
+import LogoWhatsapp from '../../assets/logosSkills/iconwhatsapp.svg';
 
 const Navbar = () => {
   return (
     <Flex
       px={8}
       py={6}
-      justifyContent="center"
       position="fixed"
       top={0}
       width="100%"
-      height={100}
+      height={60}
       backgroundColor="#191919"
       zIndex={100}
+      justifyContent={'center'}
     >
-      <Flex alignItems="center">
+      <Flex alignItems="center" mr={200}>
+        <WrapItem>
+          <Link
+            href="https://www.linkedin.com/in/ramon-lirani-8941a0193/"
+            isExternal
+            target="_blank"
+            _hover={{ opacity: 0.8 }}
+          >
+            <Avatar name="Linkedin" src={LogoLinkedin} width={30} ml={30} />
+          </Link>
+        </WrapItem>
+        <WrapItem>
+          <Link
+            href="https://github.com/Ramonlirani"
+            isExternal
+            target="_blank"
+            _hover={{ opacity: 0.8 }}
+          >
+            <Avatar name="Github" src={LogoGithub2} width={30} ml={15} />
+          </Link>
+        </WrapItem>
+        <WrapItem>
+          <Link
+            href="https://api.whatsapp.com/send?phone=41998545699"
+            textDecoration="none"
+            isExternal
+            target="_blank"
+            _hover={{ opacity: 0.8 }}
+          >
+            <Avatar src={LogoWhatsapp} width={30} height={30} ml={15} />
+          </Link>
+        </WrapItem>
+      </Flex>
+
+      <Flex alignItems="center" mr={400}>
         <Link
-          href="#"
+          href="#home"
           ml={20}
           textDecoration="none"
           color="#a7a7a7"
@@ -76,38 +102,6 @@ const Navbar = () => {
         >
           Contact
         </Link>
-        <WrapItem>
-          <Link
-            href="https://www.linkedin.com/in/ramon-lirani-8941a0193/"
-            isExternal
-            target="_blank"
-          >
-            <Avatar name="Linkedin" src={LogoLinkedin} width={30} ml={30} />
-          </Link>
-        </WrapItem>
-        <WrapItem>
-          <Link
-            href="https://github.com/Ramonlirani"
-            isExternal
-            target="_blank"
-          >
-            <Avatar name="Github" src={LogoGithub2} width={30} ml={15} />
-          </Link>
-        </WrapItem>
-        {/* <WrapItem>
-          <Avatar name="WhatsApp" src={LogoWhatsApp} width={30} ml={15} />
-        </WrapItem> */}
-        <WrapItem>
-          <Link onClick={handleDownloadResume} cursor="pointer">
-            <Avatar
-              name="Curriculo"
-              src={LogoCurriculo}
-              width={30}
-              ml={15}
-              backgroundColor="#a7a7a7"
-            />
-          </Link>
-        </WrapItem>
       </Flex>
     </Flex>
   );
