@@ -10,14 +10,7 @@ import Skills from './components/Skills/Skills';
 
 export function App() {
   return (
-    <Box
-      style={{
-        fontFamily: 'Roboto,sans-serif',
-        color: 'rgba(255, 255, 255, 0.87)',
-        backgroundColor: '#191919',
-        height: '100%',
-      }}
-    >
+    <>
       <Navbar />
       <NameCustom />
       <ButtonCV />
@@ -26,6 +19,6 @@ export function App() {
       <Experience />
       <Contact />
       <Footer />
-    </Box>
+    </>
   );
 }
