@@ -2,8 +2,13 @@ import { Avatar, Button, Flex, Image, Link, WrapItem } from '@chakra-ui/react';
 import LogoLinkedin from '../../assets/logosSkills/iconlinkedin.svg';
 import LogoGithub2 from '../../assets/logosSkills/icongithub2.svg';
 import LogoWhatsapp from '../../assets/logosSkills/iconwhatsapp.svg';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <Flex
       px={8}
@@ -51,57 +56,82 @@ const Navbar = () => {
       </Flex>
 
       <Flex alignItems="center" mr={400}>
-        <Link
-          href="#home"
-          ml={20}
-          textDecoration="none"
-          color="#a7a7a7"
-          _hover={{ color: '#fff' }}
-          fontSize={20}
+        <ScrollLink
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          style={{ marginLeft: 20 }}
+          activeClass={'active'}
         >
-          Home
-        </Link>
-        <Link
-          href="#about"
-          ml={20}
-          textDecoration="none"
-          color="#a7a7a7"
-          _hover={{ color: '#fff' }}
-          fontSize={20}
+          <span
+            style={{ cursor: 'pointer', marginRight: 20, color: '#a7a7a7' }}
+            _hover={{ opacity: 0.8 }}
+          >
+            Home
+          </span>
+        </ScrollLink>
+        <ScrollLink
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          style={{ marginLeft: 20 }}
         >
-          About
-        </Link>
-        <Link
-          href="#techStack"
-          ml={20}
-          textDecoration="none"
-          color="#a7a7a7"
-          _hover={{ color: '#fff' }}
-          fontSize={20}
+          <span
+            style={{ cursor: 'pointer', marginRight: 20, color: '#a7a7a7' }}
+            _hover={{ opacity: 0.8 }}
+          >
+            About
+          </span>
+        </ScrollLink>
+        <ScrollLink
+          to="techStack"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          style={{ marginLeft: 20 }}
         >
-          Tech Stack
-        </Link>
-        <Link
-          href="#experience"
-          ml={20}
-          textDecoration="none"
-          color="#a7a7a7"
-          _hover={{ color: '#fff' }}
-          fontSize={20}
+          <span
+            style={{ cursor: 'pointer', marginRight: 20, color: '#a7a7a7' }}
+            _hover={{ opacity: 0.8 }}
+          >
+            Tech Stack
+          </span>
+        </ScrollLink>
+        <ScrollLink
+          to="experience"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          style={{ marginLeft: 20 }}
         >
-          Experience
-        </Link>
-        <Link
-          href="#contact"
-          ml={20}
-          mr={15}
-          textDecoration="none"
-          color="#a7a7a7"
-          _hover={{ color: '#fff' }}
-          fontSize={20}
+          <span
+            style={{ cursor: 'pointer', marginRight: 20, color: '#a7a7a7' }}
+            _hover={{ opacity: 0.8 }}
+          >
+            Experience
+          </span>
+        </ScrollLink>
+        <ScrollLink
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          style={{ marginLeft: 20 }}
         >
-          Contact
-        </Link>
+          <span
+            style={{ cursor: 'pointer', marginRight: 20, color: '#a7a7a7' }}
+            _hover={{ opacity: 0.8 }}
+          >
+            Contact
+          </span>
+        </ScrollLink>
       </Flex>
     </Flex>
   );
