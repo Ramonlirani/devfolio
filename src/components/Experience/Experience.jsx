@@ -16,7 +16,7 @@ const Experience = () => {
       </Text>
       <Flex flexDirection="column" alignItems="flex-start">
         <Text fontSize="23px">
-          Robert Bosch Curitiba - Young Apprentice (1 year and 4 months) <br />
+          Robert Bosch Curitiba - Young Apprentice <br />
           - Experience in 5S project, administrative area, measurements of parts
           and responsible
           <br /> for project improvement in production, and basic administrative
@@ -24,8 +24,8 @@ const Experience = () => {
         </Text>
 
         <Text fontSize="23px">
-          View Software House - Internship (4 months) <br />- Development of the
-          Storeview application made in React Native.
+          View Software House - Internship <br />- Development of the Storeview
+          application made in React Native.
         </Text>
       </Flex>
     </Flex>
