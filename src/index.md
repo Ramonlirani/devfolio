@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ramon Lirani | Dev</title>
-  </head>
-  <body>
-    <div id="root">
-      <script type="module" src="/src/main.jsx"></script>
-    </div>
-  </body>
-</html>
+---
+layout: default
+---
+
+# Ramon Lirani | Dev
+
+<div id="root"></div>
+
+<script type="module" src="src/main.jsx"></script>
